@@ -17,7 +17,7 @@ import org.dtux.entity.Customer;
 import org.dtux.entity.repository.CustomerRepository;
 
 @Controller
-@RequestMapping(path = "/customers")
+@RequestMapping(path = "/customrs")
 public class CustomerController {
 
     @Autowired

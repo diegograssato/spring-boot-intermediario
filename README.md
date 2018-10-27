@@ -1,4 +1,4 @@
-# Download dependecies
+# Download dependencies
 
 ```
  ./gradlew build
@@ -31,5 +31,28 @@
   
   
   make build-class
+  
+ ```
+ 
+ 
+ ### Requests
+  
+ 
+```
+
+reset && curl \
+  -H 'Content-Type:application/x-www-form-urlencoded' \
+  -X POST 'http://localhost:8080/customers' \
+  -d 'name=Diego&age=12' | jq .
+
+
+reset && curl \
+  -H 'Content-Type:application/json' \
+  -X POST 'http://localhost:9001/visitors' \
+  -d '{ "name" : "Hudson Mendes" }' # | python -m json.tool
+
+reset && curl \
+  -H 'Content-Type:application/json' \
+  -X GET 'http://localhost:8080/customers'| jq .
   
  ```
